@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JAYCE-GIT的个人首页</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <h1>你好，欢迎来到我的网站</h1>
+    <h2 id="sayhi"></h2>
+    <h3 id="nowtime"></h3>
+    <script>
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        var hivalue = '';
+        if(hours>-1&&hours<=6){
+            hivalue="凌晨好！";
+        }else if(hours>6&&hours<=11){
+            hivalue = "早上好！";
+        }else if(hours>11&&hours<=15){
+            hivalue = '中午好！';
+        }else if(hours>15&&hours<=18){
+            hivalue = '下午好！';
+        }else{
+            hivalue = '晚上好！';
+        };
+        
+        $('#sayhi').html(hivalue);
+        $('#nowtime').html('现在的时间是'+hours+'点'+minutes+'分'+seconds+'秒');
+    </script>
+</body>
+</html>
